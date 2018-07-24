@@ -6,8 +6,8 @@
 @{
     ViewData["Title"] = "Home page";
 
-    var api = RiotApi.GetDevelopmentInstance("RGAPI-1693eadb-67f7-4ef2-ad68-7f3821bea237");
-    var testw = await api.Summoner.GetSummonerByNameAsync(Region.euw, "Entity One"); //you are retarded
+    var api = RiotApi.GetDevelopmentInstance("RGAPI-993e5979-6a7e-4de7-a75a-c83ca431eba7");
+    //var testw = await api.Summoner.GetSummonerByNameAsync(Region.euw, "Entity One"); //you are retarded
     var nigecunt = await api.Summoner.GetSummonerByNameAsync(Region.euw, "Entity One");
 
     try
@@ -88,7 +88,7 @@
     <div class="col-md-3">
         <h2>League Stats</h2>
         <ul>
-            <li>@testw.Name</li>
+            <li>@nigecunt.Name</li>
             <li>Sample pages using ASP.NET Core Razor Pages</li>
             <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
         </ul>
