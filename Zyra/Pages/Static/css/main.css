@@ -1,0 +1,64 @@
+.container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-champion {
+  opacity: 1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.image-champion img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.image-text {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-text p {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 16px 32px;
+}
+
+.image-container:hover .image-champion {
+  opacity: 0.3;
+}
+
+.image-container:hover .image-text {
+  opacity: 1;
+}
+
+.progress {
+  height: 30px;
+}
+
+.progress-bar,
+.progress-bar-success,
+.progress-bar-danger {
+  background-image: none;
+  line-height: 30px;
+  font-size: 14px;
+}
