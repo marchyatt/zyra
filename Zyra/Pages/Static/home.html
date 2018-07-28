@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Zyra</title>
-
     <!-- <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -16,210 +14,492 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment> -->
-
     <!-- STATIC -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-
+          crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
-
+          crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/circle.css"/>
+    <link rel="stylesheet" href="./css/circle.css" />
     <!-- STATIC -->
 </head>
-
 <body>
     <!-- STATIC -->
     <div class="container">
-        <div class="row">
-            <div class="col-sm-4 col-sm-offset-2 text-center">
-                <div class="image-container">
-                    <img class="image-champion opacity img-circle" src="./images/zyra.png" alt="Generic placeholder image" width="140" height="140">
-                    <img class="image-honour" src="./images/flair_level_3.png" />
-                    <div class="image-level">
-                        <div class="image-level inner">
-                            <span>44</span>
-                        </div>
-                    </div>
-                    <div class="image-progress progress--50"></div>
-                </div>
-
-                <h2>MNYP</h2>
-            </div>
-            <div class="col-sm-4 text-center">
-                <div class="image-container">
-                    <img class="image-champion opacity img-circle" src="./images/ashe.png" alt="Generic placeholder image" width="140" height="140">
-                    <img class="image-honour" src="./images/flair_level_4.png" />
-                    <div class="image-level">
-                        <div class="image-level inner">
-                            <span>48</span>
-                        </div>
-                    </div>
-                    <div class="image-progress progress--80"></div>
-                </div>
-                <h2>Entity One</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <h2>Total:
-                    <span class="text-muted">418 hours</span>
-                </h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
-                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-sm-6 text-right">
-                <h2>Total:
-                    <span class="text-muted">509 hours</span>
-                </h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
-                    commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-        </div>
-        <!-- WINS/LOSSES -->
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Wins/Losses</h2>
-                <hr>
-            </div>
-            <div class="col-sm-6">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 60%;">
-                        60%
-                    </div>
-                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 40%;">
-                        40%
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 60%;">
-                        60%
-                    </div>
-                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 40%;">
-                        40%
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- WINS/LOSSES -->
-
-        <!-- CHAMPIONS RECENTLY PLAYED -->
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Champions recently played</h2>
-                <hr>
-            </div>
-            <div class="col-sm-6 text-center">
+        <div class="col-md-10">
+            <section id="home">
                 <div class="row">
-                    <div class="col-sm-3 col-sm-offset-1">
+                    <div class="col-sm-4 col-sm-offset-2 text-center">
                         <div class="image-container">
-                            <img class="image-champion img-circle" src="./images/ziggs.png" alt="ziggs" width="100" height="100">
-                            <div class="image-text">
-                                <h3>Ziggs</h3>
-                                <p>10%</p>
+                            <img class="image-champion opacity img-circle" src="./images/zyra.png" alt="Generic placeholder image" width="140" height="140">
+                            <img class="image-honour" src="./images/flair_level_3.png" />
+                            <div class="image-level">
+                                <div class="image-level inner">
+                                    <span>44</span>
+                                </div>
                             </div>
+                            <div class="image-progress progress--50"></div>
                         </div>
+                        <h2>MNYP</h2>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4 text-center">
                         <div class="image-container">
-                            <img class="image-champion img-circle" src="./images/ahri.png" alt="ahri" width="100" height="100">
-                            <div class="image-text">
-                                <h3>Ahri</h3>
-                                <p>5%</p>
+                            <img class="image-champion opacity img-circle" src="./images/ashe.png" alt="Generic placeholder image" width="140" height="140">
+                            <img class="image-honour" src="./images/flair_level_4.png" />
+                            <div class="image-level">
+                                <div class="image-level inner">
+                                    <span>48</span>
+                                </div>
                             </div>
+                            <div class="image-progress progress--80"></div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="image-container">
-                            <img class="image-champion img-circle" src="./images/xerath.png" alt="xerath" width="100" height="100">
-                            <div class="image-text">
-                                <h3>Xerath</h3>
-                                <p>35%</p>
-                            </div>
-                        </div>
+                        <h2>Entity One</h2>
                     </div>
                 </div>
-                <!-- <canvas id="monChart" width="100" height="100"></canvas> -->
-            </div>
-            <div class="col-sm-6 text-center">
                 <div class="row">
-                    <div class="col-sm-3 col-sm-offset-1">
-                        <div class="image-container">
-                            <img class="image-champion img-circle" src="./images/yasuo.png" alt="yasuo" width="100" height="100">
-                            <div class="image-text">
-                                <h3>Yasuo</h3>
-                                <p>10%</p>
+                    <div class="col-sm-6">
+                        <h2>
+                            Total:
+                            <span class="text-muted">418 hours</span>
+                        </h2>
+                        <p class="lead">
+                            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                            commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <h2>
+                            Total:
+                            <span class="text-muted">509 hours</span>
+                        </h2>
+                        <p class="lead">
+                            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
+                            commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- WINS/LOSSES -->
+            <section id="winslosses">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Wins/Losses</h2>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                 style="        width: 60%;">
+                                60%
+                            </div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                 style="        width: 40%;">
+                                40%
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="image-container">
-                            <img class="image-champion img-circle" src="./images/amumu.png" alt="amumu" width="100" height="100">
-                            <div class="image-text">
-                                <h3>Amumu</h3>
-                                <p>5%</p>
+                    <div class="col-sm-6">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                 style="        width: 60%;">
+                                60%
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="image-container">
-                            <img class="image-champion img-circle" src="./images/caitlyn.png" alt="caitlyn" width="100" height="100">
-                            <div class="image-text">
-                                <h3>Caitlyn</h3>
-                                <p>35%</p>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                 style="        width: 40%;">
+                                40%
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <canvas id="marcChart" width="100" height="100"></canvas> -->
+            </section>
+            <!-- WINS/LOSSES -->
+            <!-- CHAMPIONS RECENTLY PLAYED -->
+            <section id="champsplayed">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Champions recently played</h2>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <div class="row">
+                            <div class="col-sm-3 col-sm-offset-1">
+                                <div class="image-container">
+                                    <img class="image-champion img-circle" src="./images/ziggs.png" alt="ziggs" width="100" height="100">
+                                    <div class="image-text">
+                                        <h3>Ziggs</h3>
+                                        <p>10%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="image-container">
+                                    <img class="image-champion img-circle" src="./images/ahri.png" alt="ahri" width="100" height="100">
+                                    <div class="image-text">
+                                        <h3>Ahri</h3>
+                                        <p>5%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="image-container">
+                                    <img class="image-champion img-circle" src="./images/xerath.png" alt="xerath" width="100" height="100">
+                                    <div class="image-text">
+                                        <h3>Xerath</h3>
+                                        <p>35%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <canvas id="monChart" width="100" height="100"></canvas> -->
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <div class="row">
+                            <div class="col-sm-3 col-sm-offset-1">
+                                <div class="image-container">
+                                    <img class="image-champion img-circle" src="./images/yasuo.png" alt="yasuo" width="100" height="100">
+                                    <div class="image-text">
+                                        <h3>Yasuo</h3>
+                                        <p>10%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="image-container">
+                                    <img class="image-champion img-circle" src="./images/amumu.png" alt="amumu" width="100" height="100">
+                                    <div class="image-text">
+                                        <h3>Amumu</h3>
+                                        <p>5%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="image-container">
+                                    <img class="image-champion img-circle" src="./images/caitlyn.png" alt="caitlyn" width="100" height="100">
+                                    <div class="image-text">
+                                        <h3>Caitlyn</h3>
+                                        <p>35%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <canvas id="marcChart" width="100" height="100"></canvas> -->
+                    </div>
+                </div>
+            </section>
+            <!-- CHAMPIONS RECENTLY PLAYED -->
+            <!-- Weekly Rotation (ARAM) -->
+            <section id="champsrotation">
+                <div class="row-flex row-flex-wrap">
+                    <div class="col-sm-12">
+                        <h2>Champion rotation</h2>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="./images/rotation/ahri.jpg" alt="ahri">
+                            <div class="row caption">
+                                <div class="col-xs-9">
+                                    <h3>Ahri</h3>
+                                    <i>The Nine-Tailed Fox</i>
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="./images/roles/mage.png" alt="mage" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ATT</span>
+                                <span class=visible-xs>Attack</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="        width: 30%">
+                                        30%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DEF</span>
+                                <span class=visible-xs>Defence</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%
+    ">
+                                        40%
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ABL</span>
+                                <span class=visible-xs>Ability</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="        width: 80%">
+                                        80%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DIF</span>
+                                <span class=visible-xs>Difficulty</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style=" width: 50%">
+                                        50%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="./images/rotation/ashe.jpg" alt="ahri">
+                            <div class="row caption">
+                                <div class="col-md-9">
+                                    <h3>Ashe</h3>
+                                    <i>The Frost Archer</i>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./images/roles/marksman.png" alt="mage" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ATT</span>
+                                <span class=visible-xs>Attack</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                        70%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DEF</span>
+                                <span class=visible-xs>Defence</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%
+    ">
+                                        30%
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ABL</span>
+                                <span class=visible-xs>Ability</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        20%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DIF</span>
+                                <span class=visible-xs>Difficulty</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style=" width: 40%">
+                                        40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="./images/rotation/drmundo.jpg" alt="drmundo">
+                            <div class="row caption">
+                                <div class="col-md-9">
+                                    <h3>Dr.Mundo</h3>
+                                    <i>The Madman of Zaun</i>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./images/roles/fighter.png" alt="fighter" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ATT</span>
+                                <span class=visible-xs>Attack</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                        50%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DEF</span>
+                                <span class=visible-xs>Defence</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%
+    ">
+                                        70%
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ABL</span>
+                                <span class=visible-xs>Ability</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        60%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DIF</span>
+                                <span class=visible-xs>Difficulty</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style=" width: 50%">
+                                        50%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="./images/rotation/janna.jpg" alt="janna">
+                            <div class="row caption">
+                                <div class="col-md-9">
+                                    <h3>Janna</h3>
+                                    <i>The Storm's Fury</i>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./images/roles/support.png" alt="support" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ATT</span>
+                                <span class=visible-xs>Attack</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style=" width: 30%">
+                                        30%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DEF</span>
+                                <span class=visible-xs>Defence</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%
+    ">
+                                        50%
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">ABL</span>
+                                <span class=visible-xs>Ability</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                        70%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <span class="visible-lg">DIF</span>
+                                <span class=visible-xs>Difficulty</span>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="progress small">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style=" width: 70%">
+                                        70%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Weekly Rotation (ARAM) -->
+            <hr />
+            <footer>
+                <p>&copy; 2017 - Zyra</p>
+            </footer>
+        </div>
+        <div class="col-xs-6 col-sm-2 sidebar-offcanvas navbar-fixed-right visible-lg" id="sidebar">
+            <div class="list-group">
+                <a href="#home" class="list-group-item active">Home</a>
+                <a href="#winslosses" class="list-group-item">Wins/Losses</a>
+                <a href="#champsplayed" class="list-group-item">Champions Played</a>
+                <a href="#champsrotation" class="list-group-item">Champion Rotation</a>
             </div>
         </div>
-    
-    <!-- CHAMPIONS RECENTLY PLAYED -->
+           
+            <!-- STATIC -->
 
-    <!-- STATIC -->
-    <hr />
-    <footer>
-        <p>&copy; 2017 - Zyra</p>
-    </footer>
-    </div>
+        </div>
+        <!-- <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js" asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery" crossorigin="anonymous" integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+                </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+                </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>
 
-    <!-- <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js" asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-            asp-fallback-test="window.jQuery" crossorigin="anonymous" integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-            </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-            </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
-    @RenderSection("Scripts", required: false) -->
-
-    <!-- STATIC -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="./js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./js/bootstrap.min.js"></script>
-    <!-- Chart.js -->
-    <script src="./js/chart.bundle.min.js"></script>
-    <!-- Site JS -->
-    <script src="../../wwwroot/js/site.js"></script>
-    <!-- STATIC -->
+        @RenderSection("Scripts", required: false) -->
+        <!-- STATIC -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="./js/bootstrap.min.js"></script>
+        <!-- Chart.js -->
+        <script src="./js/chart.bundle.min.js"></script>
+        <!-- Site JS -->
+        <script src="../../wwwroot/js/site.js"></script>
+        <script>
+            $('.list-group-item').on('click', function() {
+                $('.list-group-item').removeClass('active');
+                $(this).addClass('active');
+            });
+        </script>
+        <!-- STATIC -->
 </body>
-
 </html>

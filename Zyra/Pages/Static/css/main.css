@@ -142,10 +142,50 @@
     height: 30px;
 }
 
+.progress.small {
+    margin-bottom: 10px;
+    height: 20px;
+}
+
 .progress-bar,
 .progress-bar-success,
 .progress-bar-danger {
     background-image: none;
     line-height: 30px;
     font-size: 14px;
+}
+
+.progress.small .progress-bar {
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.thumbnail {
+    float: left;
+    height: 100%;
+}
+
+.caption .img-responsive {
+    margin: 16px 0;
+}
+
+.sidebar-offcanvas {
+    position: fixed;
+    top: 7%;
+    right: 4%;
+}
+
+.row-flex, .row-flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.row-flex-wrap {
+    -webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex: 0;
 }
