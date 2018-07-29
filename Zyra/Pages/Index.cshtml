@@ -3,6 +3,7 @@
 @using RiotSharp
 @using RiotSharp.Endpoints.SummonerEndpoint
 @using RiotSharp.Misc
+@using HtmlAgilityPack
 @{
     ViewData["Title"] = "Home page";
 
@@ -17,9 +18,96 @@
     //7.Amount to next level
     //8.Weeks rotation(ARAM)
     //9.current streak
-    var summoner = await api.Summoner.GetSummonerByNameAsync(Region.euw, "Entity One");
-    var matches = await api.Match.GetMatchListAsync(Region.euw, summoner.AccountId);
-    var mastery = await api.ChampionMastery.GetChampionMasteriesAsync(Region.euw, summoner.Id);
+    var region = Region.euw;
+    var summoner = await api.Summoner.GetSummonerByNameAsync(region, "Entity One");
+    var matches = await api.Match.GetMatchListAsync(region, summoner.AccountId);
+    //var mastery = await api.ChampionMastery.GetChampionMasteriesAsync(region, summoner.Id);
+
+    var profileicon = "https://ddragon.leagueoflegends.com/cdn/8.2.1/img/profileicon/";
+
+    //get match info from know matchID
+    var testMatchInfo = await api.Match.GetMatchAsync(region, 3710383392);
+
+    var win = 0;
+    var lose = 0;
+
+    var particpentId = "";
+    var gameOutcome = "";
+    // Gets individual match outcome - works
+    //foreach(var identity in testMatchInfo.ParticipantIdentities)
+    //{
+    //    if(identity.Player.SummonerName == summoner.Name)
+    //    {
+    //        var testId = identity.ParticipantId;
+    //        var teamId = testMatchInfo.Participants[testId - 1].TeamId;
+    //        foreach(var team in testMatchInfo.Teams)
+    //        {
+    //            if(team.TeamId == teamId)
+    //            {
+    //                gameOutcome = team.Win;
+
+    //            }
+
+    //        }
+
+    //    }
+
+    //}
+
+    //scrape hours played data from site - works
+    string Url = "https://wol.gg/stats/euw/entityone/";
+    HtmlWeb web = new HtmlWeb();
+    HtmlDocument doc = web.Load(Url);
+    var hoursPlayed = doc.DocumentNode.SelectSingleNode("//div[@id='time-hours']").InnerText;
+
+    //scrape match history from lol site - does not work
+    string Url2 = "https://matchhistory.euw.leagueoflegends.com/en/#match-history/EUW1/224534063";
+    HtmlWeb web2 = new HtmlWeb();
+    HtmlDocument doc2 = web2.Load(Url2);
+    var matchlist = doc2.DocumentNode.SelectNodes("//ul/li[contains(@class, 'game-summary')]");
+    IEnumerable<HtmlNode> nodes =
+    doc2.DocumentNode.Descendants(0)
+        .Where(n => n.HasClass("game-summary"));
+
+    //Gets match win/lose from summoner match history - too many api requests
+    //foreach(var match in matches.Matches)
+    //{
+    //    var matchId = match.GameId;
+
+    //    var matchInfo = await api.Match.GetMatchAsync(region, matchId);
+
+    //    foreach (var identity in matchInfo.ParticipantIdentities)
+    //    {
+    //        if (identity.Player.SummonerName == summoner.Name)
+    //        {
+    //            var testId = identity.ParticipantId;
+    //            var teamId = testMatchInfo.Participants[testId - 1].TeamId;
+    //            foreach (var team in testMatchInfo.Teams)
+    //            {
+    //                if (team.TeamId == teamId)
+    //                {
+    //                    gameOutcome = team.Win;
+
+    //                    if(team.Win == "true")
+    //                    {
+    //                        win++;
+
+    //                    }
+    //                    else
+    //                    {
+    //                        lose++;
+
+    //                    }
+    //                }
+
+    //            }
+
+    //        }
+
+    //    }
+
+    //}
+    //var testParticimentID = testMatchInfo.ParticipantIdentities..Contains("EntityOne");
 }
 
 <div class="container">
@@ -41,7 +129,7 @@
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="image-container">
-                        <img class="image-champion opacity img-circle" src="./images/ashe.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="image-champion opacity img-circle" src="@(profileicon + "3000" + ".png")" alt="Generic placeholder image" width="140" height="140">
                         <img class="image-honour" src="./images/flair_level_4.png" />
                         <div class="image-level">
                             <div class="image-level inner">
@@ -51,6 +139,8 @@
                         <div class="image-progress progress--80"></div>
                     </div>
                     <h2>@summoner.Name</h2>
+                    <h2>@win</h2>
+                    <h2>@lose</h2>
                 </div>
             </div>
             <div class="row">
